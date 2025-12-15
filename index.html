@@ -88,7 +88,7 @@
     <!-- MAIN CONTAINER: Limits width to mobile-app style (480px) -->
     <div class="max-w-[480px] mx-auto bg-sand shadow-2xl overflow-hidden min-h-screen relative">
 
-        <!-- ================= HERO SECTION (Updated) ================= -->
+        <!-- ================= HERO SECTION ================= -->
         <header class="relative w-full h-screen overflow-hidden bg-gray-900">
             <!-- Background Image with Slow Zoom Effect -->
             <div class="absolute inset-0 overflow-hidden">
@@ -108,7 +108,7 @@
                 <div class="animate-fade-in-up mt-6 opacity-0" style="animation-delay: 0.2s;">
                     <div class="inline-block border border-white/30 px-5 py-2 rounded-full backdrop-blur-md bg-white/5">
                         <p class="uppercase tracking-[0.3em] text-[10px] font-medium font-sans text-white/90">
-                          Thiệp mời cưới
+                          Wedding Invitation
                         </p>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
             <div class="absolute top-0 left-0 w-full h-16 -mt-8 bg-gradient-to-t from-paper to-transparent opacity-100"></div>
             
             <div class="fade-in-section">
-                <h2 class="font-serif italic text-5xl text-sage mb-8">Ngày Cưới</h2>
+                <h2 class="font-serif italic text-5xl text-sage mb-8">Wedding Day</h2>
                 
                 <div class="bg-[#fdfbf7] p-8 border-l-2 border-gold my-10 mx-auto max-w-sm shadow-sm">
                   <p class="font-serif italic text-dark/80 text-xl leading-relaxed">
@@ -351,8 +351,52 @@
             </div>
         </section>
 
+        <!-- ================= GIFT SECTION (NEW) ================= -->
+        <section class="bg-paper py-20 px-6">
+            <div class="fade-in-section">
+                <div class="text-center mb-10">
+                    <h3 class="font-serif text-4xl text-sage uppercase tracking-wide">Hộp Mừng Cưới</h3>
+                    <div class="w-12 h-[1px] bg-gold mx-auto mt-6"></div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-soft max-w-sm mx-auto border border-gold/20 relative overflow-hidden">
+                    <!-- Decorative corner -->
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-sage/5 rounded-bl-full -mr-8 -mt-8"></div>
+                    
+                    <p class="font-serif italic text-center text-gray-600 mb-8 leading-relaxed">
+                        "Sự hiện diện của bạn là món quà quý giá nhất. <br/>
+                        Nếu bạn muốn gửi chút quà mừng, mời bạn quét mã bên dưới nhé!"
+                    </p>
+
+                    <!-- Bank Card Info -->
+                    <div class="flex flex-col items-center">
+                        <!-- QR Image container -->
+                        <div class="w-56 h-auto bg-gray-50 mb-6 p-2 rounded-lg border border-gray-100 shadow-inner">
+                            <img src="qr.jpg.PNG" alt="QR Code Vietcombank" class="w-full h-full object-contain rounded-md">
+                        </div>
+
+                        <div class="text-center space-y-2 w-full">
+                            <div class="flex items-center justify-center gap-2 mb-1">
+                                <span class="text-green-600 font-bold font-sans text-sm tracking-wide">Vietcombank</span>
+                            </div>
+                            <p class="font-serif text-lg font-bold text-dark uppercase leading-tight">NGUYEN THI HOA PHUONG</p>
+                            
+                            <!-- Copy Account Number Button -->
+                            <div class="group flex items-center justify-center gap-3 mt-3 bg-sand py-3 px-5 rounded-full cursor-pointer hover:bg-gold/20 transition-all active:scale-95" onclick="copyToClipboard('0541000194526')">
+                                <span class="font-mono text-xl text-dark tracking-wider font-medium">0541000194526</span>
+                                <i data-lucide="copy" class="w-4 h-4 text-gray-400 group-hover:text-gold transition-colors"></i>
+                            </div>
+                            <div id="copy-feedback" class="h-4 text-[10px] text-sage font-medium opacity-0 transition-opacity text-center mt-1">Đã sao chép số tài khoản!</div>
+                            
+                            <p class="text-xs text-gray-500 font-light mt-1">Chi nhánh Chương Dương</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ================= RSVP SECTION ================= -->
-        <section class="bg-white py-20 px-6">
+        <section class="bg-sand py-20 px-6">
             <div class="fade-in-section">
                 <div class="text-center mb-12">
                   <h3 class="font-serif text-4xl text-sage uppercase tracking-wide">Xác Nhận Tham Dự</h3>
@@ -366,27 +410,27 @@
                 >
                   <div>
                     <label class="block text-[10px] uppercase tracking-widest text-sage font-bold mb-2">Họ và tên <span class="text-red-400">*</span></label>
-                    <input type="text" name="Tên" required class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md" />
+                    <input type="text" name="Tên" required class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md shadow-sm" />
                   </div>
 
                   <div>
                     <label class="block text-[10px] uppercase tracking-widest text-sage font-bold mb-2">Số điện thoại <span class="text-red-400">*</span></label>
-                    <input type="tel" name="SĐT" required class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md" />
+                    <input type="tel" name="SĐT" required class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md shadow-sm" />
                   </div>
 
                   <div>
                     <label class="block text-[10px] uppercase tracking-widest text-sage font-bold mb-2">Người đi cùng</label>
-                    <input type="text" name="Người đi cùng" class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md" />
+                    <input type="text" name="Người đi cùng" class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md shadow-sm" />
                   </div>
                   
                   <div class="grid grid-cols-2 gap-5">
                     <div>
                         <label class="block text-[10px] uppercase tracking-widest text-sage font-bold mb-2">Số người lớn</label>
-                        <input type="number" name="Số người lớn" min="0" class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md" />
+                        <input type="number" name="Số người lớn" min="0" class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md shadow-sm" />
                     </div>
                     <div>
                         <label class="block text-[10px] uppercase tracking-widest text-sage font-bold mb-2">Số trẻ em</label>
-                        <input type="number" name="Số trẻ em" min="0" class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md" />
+                        <input type="number" name="Số trẻ em" min="0" class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md shadow-sm" />
                     </div>
                   </div>
         
@@ -397,7 +441,7 @@
                     <textarea 
                         name="Chiều cao & tuổi trẻ em"
                         placeholder="Ví dụ: Bé A – 110cm – 4 tuổi"
-                        class="w-full p-4 bg-sand border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md h-28 resize-none placeholder:text-gray-400 placeholder:font-light"
+                        class="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all text-sm rounded-md h-28 resize-none placeholder:text-gray-400 placeholder:font-light shadow-sm"
                     ></textarea>
                   </div>
         
@@ -442,8 +486,21 @@
 
     </div>
 
-    <!-- SCRIPT: Animations & Icons -->
+    <!-- SCRIPT: Animations & Icons & Logic -->
     <script>
+      // Copy to clipboard function
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const feedback = document.getElementById('copy-feedback');
+            feedback.style.opacity = '1';
+            setTimeout(() => {
+                feedback.style.opacity = '0';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize Icons
         lucide.createIcons();
